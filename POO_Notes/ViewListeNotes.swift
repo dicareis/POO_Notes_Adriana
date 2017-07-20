@@ -1,17 +1,28 @@
 //
-//  ViewController.swift
+//  ViewListeNotes.swift
 //  POO_Notes
 //
 //  Created by eleves on 2017-07-20.
 //  Copyright © 2017 GrassetSucre. All rights reserved.
 //
 
+
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewListeNotes: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    @IBOutlet weak var textField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     
     
     
@@ -44,50 +55,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     //---------------------
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    
-    //--------------- Methode pour ajouter une note à la table ---------------------//
-    @IBAction func ajouterNote(_ sender: UIButton) {
-    }
-    
-    
-    //--------------- Methode pour sauvegarder les notes sur le serveur ---------------------//
-    @IBAction func sauvegarderServeur(_ sender: UIButton) {
-    }
-    
-    //--------------- Methode pour telecharger les notes sauvegardées sur le serveur ---------------------//
-    @IBAction func telechargerNotes(_ sender: UIButton) {
-    }
-    
-    //--------------- Methode pour effacer la selection, pas les notes ---------------------//
-    @IBAction func effacerSelection(_ sender: UIButton) {
-    }
-
     
     
     
     
 }
-

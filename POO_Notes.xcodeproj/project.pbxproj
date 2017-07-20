@@ -12,6 +12,15 @@
 		9B42450C1F212349003E862F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B42450A1F212349003E862F /* Main.storyboard */; };
 		9B42450E1F212349003E862F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B42450D1F212349003E862F /* Assets.xcassets */; };
 		9B4245111F212349003E862F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B42450F1F212349003E862F /* LaunchScreen.storyboard */; };
+		9B42451C1F2125F3003E862F /* arrierePlan.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4245181F2125F3003E862F /* arrierePlan.png */; };
+		9B42451D1F2125F3003E862F /* bouton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4245191F2125F3003E862F /* bouton.png */; };
+		9B42451E1F2125F3003E862F /* boutonPlusClair.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B42451A1F2125F3003E862F /* boutonPlusClair.png */; };
+		9B42451F1F2125F3003E862F /* Icone.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B42451B1F2125F3003E862F /* Icone.png */; };
+		9B4245211F2128D1003E862F /* bouton grand.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4245201F2128D1003E862F /* bouton grand.png */; };
+		9B4245231F212AF0003E862F /* bouton grandClair.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4245221F212AF0003E862F /* bouton grandClair.png */; };
+		9B4245251F212CA0003E862F /* arrierePlanClair.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4245241F212CA0003E862F /* arrierePlanClair.png */; };
+		9B4245271F212D71003E862F /* arrierePlanMedium.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4245261F212D71003E862F /* arrierePlanMedium.png */; };
+		9B42452A1F213642003E862F /* ViewListeNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4245291F213642003E862F /* ViewListeNotes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		9B42450D1F212349003E862F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B4245101F212349003E862F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B4245121F212349003E862F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4245181F2125F3003E862F /* arrierePlan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrierePlan.png; sourceTree = "<group>"; };
+		9B4245191F2125F3003E862F /* bouton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bouton.png; sourceTree = "<group>"; };
+		9B42451A1F2125F3003E862F /* boutonPlusClair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boutonPlusClair.png; sourceTree = "<group>"; };
+		9B42451B1F2125F3003E862F /* Icone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icone.png; sourceTree = "<group>"; };
+		9B4245201F2128D1003E862F /* bouton grand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouton grand.png"; sourceTree = "<group>"; };
+		9B4245221F212AF0003E862F /* bouton grandClair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouton grandClair.png"; sourceTree = "<group>"; };
+		9B4245241F212CA0003E862F /* arrierePlanClair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrierePlanClair.png; sourceTree = "<group>"; };
+		9B4245261F212D71003E862F /* arrierePlanMedium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrierePlanMedium.png; sourceTree = "<group>"; };
+		9B4245291F213642003E862F /* ViewListeNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewListeNotes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +72,31 @@
 		9B4245051F212349003E862F /* POO_Notes */ = {
 			isa = PBXGroup;
 			children = (
+				9B4245281F2133B3003E862F /* image */,
 				9B4245061F212349003E862F /* AppDelegate.swift */,
 				9B4245081F212349003E862F /* ViewController.swift */,
+				9B4245291F213642003E862F /* ViewListeNotes.swift */,
 				9B42450A1F212349003E862F /* Main.storyboard */,
 				9B42450D1F212349003E862F /* Assets.xcassets */,
 				9B42450F1F212349003E862F /* LaunchScreen.storyboard */,
 				9B4245121F212349003E862F /* Info.plist */,
 			);
 			path = POO_Notes;
+			sourceTree = "<group>";
+		};
+		9B4245281F2133B3003E862F /* image */ = {
+			isa = PBXGroup;
+			children = (
+				9B4245261F212D71003E862F /* arrierePlanMedium.png */,
+				9B4245221F212AF0003E862F /* bouton grandClair.png */,
+				9B4245241F212CA0003E862F /* arrierePlanClair.png */,
+				9B4245201F2128D1003E862F /* bouton grand.png */,
+				9B4245181F2125F3003E862F /* arrierePlan.png */,
+				9B4245191F2125F3003E862F /* bouton.png */,
+				9B42451A1F2125F3003E862F /* boutonPlusClair.png */,
+				9B42451B1F2125F3003E862F /* Icone.png */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +159,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4245111F212349003E862F /* LaunchScreen.storyboard in Resources */,
+				9B4245251F212CA0003E862F /* arrierePlanClair.png in Resources */,
 				9B42450E1F212349003E862F /* Assets.xcassets in Resources */,
+				9B42451F1F2125F3003E862F /* Icone.png in Resources */,
+				9B42451E1F2125F3003E862F /* boutonPlusClair.png in Resources */,
 				9B42450C1F212349003E862F /* Main.storyboard in Resources */,
+				9B4245231F212AF0003E862F /* bouton grandClair.png in Resources */,
+				9B42451C1F2125F3003E862F /* arrierePlan.png in Resources */,
+				9B4245211F2128D1003E862F /* bouton grand.png in Resources */,
+				9B4245271F212D71003E862F /* arrierePlanMedium.png in Resources */,
+				9B42451D1F2125F3003E862F /* bouton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B42452A1F213642003E862F /* ViewListeNotes.swift in Sources */,
 				9B4245091F212349003E862F /* ViewController.swift in Sources */,
 				9B4245071F212349003E862F /* AppDelegate.swift in Sources */,
 			);
