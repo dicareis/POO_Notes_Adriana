@@ -21,6 +21,7 @@
 		9B4245251F212CA0003E862F /* arrierePlanClair.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4245241F212CA0003E862F /* arrierePlanClair.png */; };
 		9B4245271F212D71003E862F /* arrierePlanMedium.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4245261F212D71003E862F /* arrierePlanMedium.png */; };
 		9B42452A1F213642003E862F /* ViewListeNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4245291F213642003E862F /* ViewListeNotes.swift */; };
+		9BFD257F1F30E974003815CA /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD257E1F30E974003815CA /* Add.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		9B4245241F212CA0003E862F /* arrierePlanClair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrierePlanClair.png; sourceTree = "<group>"; };
 		9B4245261F212D71003E862F /* arrierePlanMedium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrierePlanMedium.png; sourceTree = "<group>"; };
 		9B4245291F213642003E862F /* ViewListeNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewListeNotes.swift; sourceTree = "<group>"; };
+		9BFD257E1F30E974003815CA /* Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				9B4245281F2133B3003E862F /* image */,
 				9B4245061F212349003E862F /* AppDelegate.swift */,
+				9BFD257E1F30E974003815CA /* Add.swift */,
 				9B4245081F212349003E862F /* ViewController.swift */,
 				9B4245291F213642003E862F /* ViewListeNotes.swift */,
 				9B42450A1F212349003E862F /* Main.storyboard */,
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B42452A1F213642003E862F /* ViewListeNotes.swift in Sources */,
+				9BFD257F1F30E974003815CA /* Add.swift in Sources */,
 				9B4245091F212349003E862F /* ViewController.swift in Sources */,
 				9B4245071F212349003E862F /* AppDelegate.swift in Sources */,
 			);
@@ -343,6 +347,7 @@
 				9B4245171F212349003E862F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

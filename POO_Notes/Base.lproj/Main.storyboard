@@ -24,10 +24,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrierePlanMedium.png" translatesAutoresizingMaskIntoConstraints="NO" id="TqD-5N-Tel">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qTo-cd-V5H">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qTo-cd-V5H">
                                 <rect key="frame" x="16" y="206" width="339" height="328"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.77037246839999995" green="0.91793505549999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="mKA-aS-Gmi"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="1ye-pW-ReV"/>
@@ -111,6 +112,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="qTo-cd-V5H" id="gya-Pb-1W2"/>
                         <outlet property="textField" destination="AXd-2t-uFT" id="vGC-R8-3p8"/>
                     </connections>
                 </viewController>
