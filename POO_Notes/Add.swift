@@ -11,7 +11,7 @@ import Foundation
 class Add {
     
     var dictionnary: [String: Bool]!
-    var motCle: [String] = []
+    var keys: [String] = []
     var values: [Bool] = []
     let userDefault = UserDefaults.standard
     
@@ -27,10 +27,10 @@ class Add {
     }
     //---------------------------
     func parseDict() {
-        motCle = []
+        keys = []
         values = []
         for (k, v) in dictionnary {
-            motCle.append(k)
+            keys.append(k)
             values.append(v)
         }
     }

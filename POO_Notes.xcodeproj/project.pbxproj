@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B3C85971F3A5D580076AD2D /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3C85961F3A5D580076AD2D /* JsonManager.swift */; };
 		9B4245071F212349003E862F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4245061F212349003E862F /* AppDelegate.swift */; };
 		9B4245091F212349003E862F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4245081F212349003E862F /* ViewController.swift */; };
 		9B42450C1F212349003E862F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B42450A1F212349003E862F /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B3C85961F3A5D580076AD2D /* JsonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		9B4245031F212349003E862F /* POO_Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POO_Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4245061F212349003E862F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B4245081F212349003E862F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				9B4245061F212349003E862F /* AppDelegate.swift */,
 				9BFD257E1F30E974003815CA /* Add.swift */,
 				9B4245081F212349003E862F /* ViewController.swift */,
+				9B3C85961F3A5D580076AD2D /* JsonManager.swift */,
 				9B4245291F213642003E862F /* ViewListeNotes.swift */,
 				9B42450A1F212349003E862F /* Main.storyboard */,
 				9B42450D1F212349003E862F /* Assets.xcassets */,
@@ -184,6 +187,7 @@
 			files = (
 				9B42452A1F213642003E862F /* ViewListeNotes.swift in Sources */,
 				9BFD257F1F30E974003815CA /* Add.swift in Sources */,
+				9B3C85971F3A5D580076AD2D /* JsonManager.swift in Sources */,
 				9B4245091F212349003E862F /* ViewController.swift in Sources */,
 				9B4245071F212349003E862F /* AppDelegate.swift in Sources */,
 			);

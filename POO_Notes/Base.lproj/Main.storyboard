@@ -64,7 +64,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="effacerSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4e-vx-oHF"/>
+                                    <action selector="deselectionner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47O-ex-LE6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwk-gN-Gh9">

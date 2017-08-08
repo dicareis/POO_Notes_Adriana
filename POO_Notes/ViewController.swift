@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     let objAdd = Add()
+    let objAddTest = Add()
+    let jsonManager = JsonManager(urlToJsonFile: "http://localhost/dashboard/programmationOO2_Adriana/json_php/data.json")
     //---------------------
     
     override func viewDidLoad() {
@@ -35,7 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //---------------------
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"proto")
-        cell.textLabel!.text = objAdd.motCle[indexPath.row]
+        cell.textLabel!.text = objAdd.keys[indexPath.row]
         cell.textLabel?.textColor = UIColor.black
         cell.backgroundColor = UIColor.clear
         return cell
@@ -50,7 +52,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == UITableViewCellEditingStyle.delete {
-            objAdd.removeValue(keyToRemove: objAdd.motCle[indexPath.row])
+            objAdd.removeValue(keyToRemove: objAdd.keys[indexPath.row])
             tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
         }
     }
@@ -131,9 +133,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //--------------- Methode pour telecharger les notes sauvegardées sur le serveur ---------------------//
     @IBAction func telechargerNotes(_ sender: UIButton) {
+        print("FONCTION TELECHAGER")
         
-        
-        let requestURL: NSURL = NSURL(string: "http://localhost/dashboard/programmationOO2_Adriana/json_php/add.json")!
+        let requestURL: NSURL = NSURL(string: "http://localhost/dashboard/programmationOO2_Adriana/json_php/data.json")!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: requestURL as URL)
         let session = URLSession.shared
         let task = session.dataTask(with: urlRequest as URLRequest) {
@@ -145,11 +147,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 do{
                     let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments)
                     print(json)
+                    
+                   // let convertirJson = json as? [String : Bool]!
+                 //   let convertirJson = Add(json)
+                    
+
+
                 }catch {
                     print("Erreur Json: \(error)")
                 }
             } }
         task.resume()
+        
+        
+        print("TEST NOUVEAU")
+        jsonManager.importJSON()
+        jsonManager.parseJsonDict(objTestAdd: objAddTest)
+        print (jsonManager)
+        
     }
 
     
@@ -159,14 +174,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    
-    
-    
+    @IBAction func deselectionner(_ sender: UIButton) {
+        
+        deselectionnerObj()
+        
+           }
 
  
     
     
-    
+    func deselectionnerObj (){
+        for i in 0 ..< objAdd.dictionnary.count    {
+            if Array( objAdd.dictionnary.values)[i] {
+                objAdd.dictionnary[Array( objAdd.dictionnary.keys)[i]] = false
+            }
+        }
+        tableView.reloadData()
+
+    }
     
     
     
