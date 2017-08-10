@@ -11,7 +11,7 @@ import UIKit
 
 class ViewListeNotes: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
+    var objAdd = Add()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +33,20 @@ class ViewListeNotes: UIViewController, UITableViewDelegate, UITableViewDataSour
     //---------------------
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableView.backgroundColor = UIColor.clear
-        return 20
+        return objAdd.countTrue()
     }
     //---------------------
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"proto")
         
-        cell.textLabel!.text = "Hello World"
+        
+//        if objAdd.values[indexPath.row] == true
+//        {
+//            cell.textLabel!.text = objAdd.keys[indexPath.row]
+//        }
+        
+        cell.textLabel!.text = objAdd.keys[indexPath.row]
+        
         cell.textLabel?.textColor = UIColor.black
         cell.backgroundColor = UIColor.clear
         return cell

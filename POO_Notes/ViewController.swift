@@ -13,9 +13,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    let objAdd = Add()
-    let objAddTest = Add()
+    var objAdd = Add()
     let jsonManager = JsonManager(urlToJsonFile: "http://localhost/dashboard/programmationOO2_Adriana/json_php/data.json")
+    
     //---------------------
     
     override func viewDidLoad() {
@@ -65,25 +65,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             objAdd.dictionnary[Array(objAdd.dictionnary.keys)[indexPath.row]] = false
         }
+        objAdd.saveData()
         tableView.reloadData()
     }
     //---------------------
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
 
     
     
@@ -102,8 +88,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         print(objAdd.dictionnary)
         
-        
-       // let dictionary = ["a Key" : "aValue", "other Key" : "otherValue"]
         var urlToSend = "http://localhost/dashboard/programmationOO2_Adriana/json_php/add.php?json=["
         var counter = 0
         let total = objAdd.dictionnary.count
@@ -128,42 +112,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dataTask.resume()
         
         
-        
     }
     
     //--------------- Methode pour telecharger les notes sauvegardées sur le serveur ---------------------//
     @IBAction func telechargerNotes(_ sender: UIButton) {
-        print("FONCTION TELECHAGER")
-        
-        let requestURL: NSURL = NSURL(string: "http://localhost/dashboard/programmationOO2_Adriana/json_php/data.json")!
-        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: requestURL as URL)
-        let session = URLSession.shared
-        let task = session.dataTask(with: urlRequest as URLRequest) {
-            (data, response, error) -> Void in
-            let httpResponse = response as! HTTPURLResponse
-            let statusCode = httpResponse.statusCode
-            if (statusCode == 200) {
-                print("Tout fonctionne correctement...")
-                do{
-                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments)
-                    print(json)
-                    
-                   // let convertirJson = json as? [String : Bool]!
-                 //   let convertirJson = Add(json)
-                    
 
-
-                }catch {
-                    print("Erreur Json: \(error)")
-                }
-            } }
-        task.resume()
-        
-        
-        print("TEST NOUVEAU")
+        objAdd.removeALL()
         jsonManager.importJSON()
-        jsonManager.parseJsonDict(objTestAdd: objAddTest)
-        print (jsonManager)
+        jsonManager.parseJsonDict(objTestAdd: objAdd)
+        objAdd.saveData()
+        tableView.reloadData()
         
     }
 
@@ -176,22 +134,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func deselectionner(_ sender: UIButton) {
         
-        deselectionnerObj()
-        
-           }
-
- 
-    
-    
-    func deselectionnerObj (){
         for i in 0 ..< objAdd.dictionnary.count    {
             if Array( objAdd.dictionnary.values)[i] {
                 objAdd.dictionnary[Array( objAdd.dictionnary.keys)[i]] = false
             }
         }
+        
         tableView.reloadData()
-
     }
+
+ 
+    
+
     
     
     

@@ -49,29 +49,31 @@ class Add {
         parseDict()
         userDefault.setValue(dictionnary, forKey: "data")
     }
-    //---------------------------
+    //--------------------------- REGARDER SI J'UTILISE LA FONCTION
     func reloadValues() {
-        
         let i = 0
         while i < dictionnary.count{
              dictionnary[Array(dictionnary.keys)[i]] = false
         }
-        
-        
-        
-//        for c in 0 ..< (b as! NSArray).count
-//        {
-//            var newString = "\""
-//            newString +=  ((b as! NSArray)[c] as! String)
-//            newString += "\""
-//            CSV += newString + ","
-//        }
-        
-        
-        
-        
-        
     }
+    //---------------------------
+    func removeALL () {
+        dictionnary = [:]
+        self.parseDict()
+    }
+    //---------------------------
+    func countTrue () -> Int {
+       var counter = 0
+        
+        for i in self.values {
+            
+            if i == true{
+                counter += 1
+            }
+        }
+        return counter
+    }
+    
     
 }//fin de la class Add
 
