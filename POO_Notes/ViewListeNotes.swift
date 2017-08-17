@@ -34,7 +34,7 @@ class ViewListeNotes: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"proto")
         cell.textLabel!.text = objAdd.keysTrue[indexPath.row]
-        cell.textLabel?.textColor = UIColor.black
+        cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = UIColor.clear
         return cell
     }

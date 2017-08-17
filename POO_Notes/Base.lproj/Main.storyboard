@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -78,7 +78,7 @@
                                     <segue destination="XoZ-NK-hHa" kind="presentation" id="NPU-Jt-KGG"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icone.png" translatesAutoresizingMaskIntoConstraints="NO" id="SzZ-nW-TCE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconeGrande.png" translatesAutoresizingMaskIntoConstraints="NO" id="SzZ-nW-TCE">
                                 <rect key="frame" x="88" y="20" width="198" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -146,7 +146,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="UhG-Jl-3h6"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icone.png" translatesAutoresizingMaskIntoConstraints="NO" id="zqu-6V-HSE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconeGrande.png" translatesAutoresizingMaskIntoConstraints="NO" id="zqu-6V-HSE">
                                 <rect key="frame" x="88" y="20" width="198" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -177,9 +177,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icone.png" width="176" height="84"/>
         <image name="arrierePlanMedium.png" width="346" height="523"/>
         <image name="bouton grand.png" width="333" height="48"/>
         <image name="boutonPlusClair.png" width="188" height="48"/>
+        <image name="iconeGrande.png" width="598" height="244"/>
     </resources>
 </document>
