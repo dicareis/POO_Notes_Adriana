@@ -38,14 +38,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"proto")
         cell.textLabel!.text = objAdd.keys[indexPath.row]
-        cell.textLabel?.textColor = UIColor.black
+        cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = UIColor.clear
         return cell
     }
     //---------------------
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if Array(objAdd.dictionnary.values)[indexPath.row] {
-            cell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.2)
+            cell.backgroundColor = UIColor(red: 0.125, green: 0.251, blue: 0.6, alpha: 1.0)
+            
         }
     }
     //---------------------
@@ -119,7 +120,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         objAdd.removeALL()
         jsonManager.importJSON()
-        jsonManager.parseJsonDict(objTestAdd: objAdd)
+        jsonManager.parseJsonDict(objAdd: objAdd)
         objAdd.saveData()
         tableView.reloadData()
         

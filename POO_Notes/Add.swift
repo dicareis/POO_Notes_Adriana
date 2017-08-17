@@ -13,6 +13,7 @@ class Add {
     var dictionnary: [String: Bool]!
     var keys: [String] = []
     var values: [Bool] = []
+    var keysTrue: [String] = []
     let userDefault = UserDefaults.standard
     
     //---------------------------
@@ -50,30 +51,56 @@ class Add {
         userDefault.setValue(dictionnary, forKey: "data")
     }
     //--------------------------- REGARDER SI J'UTILISE LA FONCTION
-    func reloadValues() {
-        let i = 0
-        while i < dictionnary.count{
-             dictionnary[Array(dictionnary.keys)[i]] = false
-        }
-    }
+//    func reloadValues() {
+//        let i = 0
+//        while i < dictionnary.count{
+//             dictionnary[Array(dictionnary.keys)[i]] = false
+//        }
+//    }
     //---------------------------
     func removeALL () {
         dictionnary = [:]
         self.parseDict()
     }
     //---------------------------
-    func countTrue () -> Int {
-       var counter = 0
-        
-        for i in self.values {
+//    func countTrue () -> Int {
+//       var counter = 0
+//        
+//        for i in self.values {
+//            
+//            if i == true{
+//                counter += 1
+//            }
+//        }
+//        return counter
+//    }
+    
+    //---------------------------
+    func arrayTrue () {
+      
+        for (k, v) in dictionnary {
             
-            if i == true{
-                counter += 1
+            if v == true{
+                keysTrue.append(k)
             }
         }
-        return counter
+        saveData()
+    }
+    //---------------------------
+    func removeKeyTrue(_ keyToRemove: String, _ indexToRemove: Int){
+        dictionnary[keyToRemove] = false
+        keysTrue.remove(at: indexToRemove)
+        saveData()
     }
     
     
 }//fin de la class Add
+
+
+
+
+
+
+
+
 

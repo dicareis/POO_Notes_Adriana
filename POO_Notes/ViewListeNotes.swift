@@ -15,7 +15,7 @@ class ViewListeNotes: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        objAdd.arrayTrue()
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,29 +24,16 @@ class ViewListeNotes: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    
-    
-    
-    
-    
-    
     //---------------------
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableView.backgroundColor = UIColor.clear
-        return objAdd.countTrue()
+        
+        return objAdd.keysTrue.count
     }
     //---------------------
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"proto")
-        
-        
-//        if objAdd.values[indexPath.row] == true
-//        {
-//            cell.textLabel!.text = objAdd.keys[indexPath.row]
-//        }
-        
-        cell.textLabel!.text = objAdd.keys[indexPath.row]
-        
+        cell.textLabel!.text = objAdd.keysTrue[indexPath.row]
         cell.textLabel?.textColor = UIColor.black
         cell.backgroundColor = UIColor.clear
         return cell
@@ -59,14 +46,29 @@ class ViewListeNotes: UIViewController, UITableViewDelegate, UITableViewDataSour
     //---------------------
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
+            
+            
+            
+            objAdd.removeKeyTrue(objAdd.keysTrue[indexPath.row], indexPath.row)
             tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     //---------------------
 
     
     
-    
+   
     
     
 }

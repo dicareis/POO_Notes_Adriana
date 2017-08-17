@@ -24,33 +24,30 @@ class JsonManager
     }
     
     
-    func parseJsonDict(objTestAdd: Add) {
+    func parseJsonDict(objAdd: Add) {
         
         var x : String
-        objTestAdd.keys = []
-        objTestAdd.values = []
+        objAdd.keys = []
+        objAdd.values = []
         
         for (k, v) in self.jsonParsed {
-            objTestAdd.keys.append(k as! String)
+            objAdd.keys.append(k as! String)
             x = v as! String
             
             if x == "false"{
-                objTestAdd.values.append(false)
+                objAdd.values.append(false)
             }
             else {
-                objTestAdd.values.append(true)
+                objAdd.values.append(true)
             }
             
         }
         
-        for i in 0 ..< objTestAdd.keys.count{
+        for i in 0 ..< objAdd.keys.count{
             
-            objTestAdd.dictionnary[objTestAdd.keys[i]] = objTestAdd.values[i]
+            objAdd.dictionnary[objAdd.keys[i]] = objAdd.values[i]
         }
-        
-        print(objTestAdd.values)
-        print(objTestAdd.keys)
-        print(objTestAdd.dictionnary)
+
         
     }
     
